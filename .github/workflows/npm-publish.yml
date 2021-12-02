@@ -22,11 +22,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
+          registry-url: https://registry.npmjs.org/
           cache: pnpm
 
       - run: pnpm install
       - run: pnpm build
       - run: pnpm package
-      - run: cd package && pnpm publish --no-git-checks --access
+      - run: cd package && pnpm publish --no-git-checks --access public
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
