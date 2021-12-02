@@ -24,9 +24,10 @@ jobs:
           node-version: 12.x
           cache: pnpm
 
-        - run: pnpm install
-        - run: pnpm build
-        - run: pnpm package
-        - run: cd package && pnpm publish --no-git-checks --access
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm package
+      - run: cd package && pnpm publish --no-git-checks --access
+
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
