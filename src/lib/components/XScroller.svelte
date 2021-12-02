@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { browser } from '$app/env'
+
   import { onMount } from 'svelte'
   import { spring } from 'svelte/motion'
 
@@ -28,7 +30,9 @@
   }
 
   onMount(() => {
-    x.set(getTranslate(), { hard: true })
+    if (browser) {
+      x.set(getTranslate(), { hard: true })
+    }
   })
 </script>
 
