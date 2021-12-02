@@ -28,20 +28,13 @@
     "@sveltejs/kit": "next",
     "@windicss/plugin-icons": "^1.0.2",
     "svelte": "^3.42.6",
-    "svelte-as-markup-preprocessor": "^0.2.0",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.9.4",
-    "svelte-preprocess-cssmodules": "^2.1.1",
     "svelte-windicss-preprocess": "^4.1.7",
     "svelte2tsx": "^0.4.10",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3",
     "windicss": "^3.2.1"
   },
-  "type": "module",
-  "dependencies": {
-    "carbon-icons-svelte": "^10.38.0",
-    "carbon-preprocess-svelte": "^0.6.0",
-    "sswr": "^1.3.1"
-  }
+  "type": "module"
 }

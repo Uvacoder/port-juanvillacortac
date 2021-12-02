@@ -1,7 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import { windi } from 'svelte-windicss-preprocess';
 import auto from '@sveltejs/adapter-auto';
-import { optimizeImports } from "carbon-preprocess-svelte";
 import path from 'path'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,7 +14,6 @@ const config = {
 			silent: true,
 			configPath: './windi.config.js',
 		}),
-		optimizeImports(),
 	],
 	kit: {
 		adapter: auto(),
