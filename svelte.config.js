@@ -20,9 +20,6 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#main',
 		vite: {
-			optimizeDeps: {
-				exclude: ['sswr']
-			},
 			resolve: {
 				alias: {
 					'@': path.resolve('./'),
