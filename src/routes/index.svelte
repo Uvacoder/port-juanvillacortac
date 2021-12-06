@@ -1,11 +1,9 @@
-<!-- <script context="module" lang="ts">
+<script context="module" lang="ts">
   import type { Load } from '@sveltejs/kit'
-  import { pageProps } from '$lib/store'
-  import { browser } from '$app/env'
   export const load: Load = async ({ fetch }) => {
     return { props: await (await fetch('/date.json')).json() }
   }
-</script> -->
+</script>
 
 <script lang="ts">
   import { XScroller } from '$lib'
