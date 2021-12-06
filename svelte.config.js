@@ -19,13 +19,6 @@ const config = {
 		adapter: auto(),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#main',
-		vite: {
-			resolve: {
-				alias: {
-					'@': path.resolve('./'),
-				}
-			}
-		}
 	}
 };
 

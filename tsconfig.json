@@ -29,12 +29,6 @@
 			"./node_modules/@sveltejs/kit"
 		],
 		"paths": {
-			"@": [
-				"./"
-			],
-			"@/": [
-				"./*"
-			],
 			"$lib": [
 				"src/lib"
 			],

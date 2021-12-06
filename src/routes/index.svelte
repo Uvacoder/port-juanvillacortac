@@ -1,12 +1,25 @@
 <script context="module" lang="ts">
-  export const prerender = true
+  import type { Load } from '@sveltejs/kit'
+  import { pageProps } from '$lib/store'
+  import { browser } from '$app/env'
+  export let prerender = true
+  export const load: Load = async ({ fetch }) => {
+    return { props: await (await fetch('/date.json')).json() }
+  }
 </script>
 
 <script lang="ts">
   import { XScroller } from '$lib'
+  export let date: string
+
+  $: if (browser && date) {
+    pageProps.set(date)
+  }
 </script>
 
-<div class="flex h-screen bg-yellow-100 w-full" />
+<div class="flex h-screen bg-yellow-100 w-full items-center justify-center">
+  <h1 class="text-center text-4xl">{date}</h1>
+</div>
 <div class="flex h-screen bg-yellow-900 w-full" />
 <XScroller>
   <div class="flex w-full">

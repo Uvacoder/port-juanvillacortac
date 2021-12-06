@@ -1,5 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/env'
+  import { clamp } from '$lib/utils/math'
 
   import { onMount } from 'svelte'
   import { spring } from 'svelte/motion'
@@ -19,10 +20,9 @@
 
   const getTranslate = () => {
     const offsetTop = parent.getBoundingClientRect().top + window.scrollY
-    const width = node.clientWidth
-    const height = node.scrollWidth - width
-    const xx = Math.max(0, window.scrollY - offsetTop)
-    return Math.min(xx, height) * -1
+    const virtualWidth = node.clientWidth
+    const width = node.scrollWidth - virtualWidth
+    return clamp({ min: 0, max: width, val: window.scrollY - offsetTop }) * -1
   }
 
   const handler = () => {
