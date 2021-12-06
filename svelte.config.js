@@ -10,7 +10,6 @@ const config = {
 	preprocess: [
 		preprocess(),
 		windi({
-			mode: process.env.NODE_ENV,
 			silent: true,
 			configPath: './windi.config.js',
 		}),
