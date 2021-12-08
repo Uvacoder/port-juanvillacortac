@@ -25,6 +25,7 @@ export default defineConfig({
         pink: colors.fuchsia,
       },
       fontFamily: {
+        title: ['Comforter Brush', 'sans-serif'],
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
@@ -38,7 +39,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    filters,
+    // filters,
     forms,
     aspectRatio,
     lineClamp,

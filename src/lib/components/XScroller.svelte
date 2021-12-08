@@ -4,6 +4,7 @@
 
   import { onMount } from 'svelte'
   import { spring } from 'svelte/motion'
+  import { writable } from 'svelte/store'
 
   export let damping = 1
   export let precision = 1
@@ -17,11 +18,17 @@
 
   let parent: HTMLDivElement
   let node: HTMLDivElement
+  const height = writable(0)
 
   const getTranslate = () => {
     const offsetTop = parent.getBoundingClientRect().top + window.scrollY
-    const virtualWidth = node.clientWidth
+    const virtualWidth = node.offsetWidth
     const width = node.scrollWidth - virtualWidth
+    $height =
+      node.scrollWidth +
+      (window.innerWidth < window.outerHeight
+        ? virtualWidth * 2
+        : (virtualWidth / 2) * -1)
     return clamp({ min: 0, max: width, val: window.scrollY - offsetTop }) * -1
   }
 
@@ -36,11 +43,11 @@
   })
 </script>
 
-<svelte:window on:scroll|passive={handler} on:resize|passive={handler} />
+<svelte:window on:scroll|passive={handler} on:resize|resize={handler} />
 
 <div
   class="main"
-  style="height: {node?.scrollWidth ? node.scrollWidth + 'px' : '100%'}"
+  style="height: {$height ? $height + 'px' : '100%'}"
   bind:this={parent}
 >
   <div class="outer">
