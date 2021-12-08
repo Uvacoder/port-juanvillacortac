@@ -8,6 +8,7 @@
 </script>
 
 <svelte:head>
+  <title>Motion-Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"
