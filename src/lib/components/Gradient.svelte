@@ -1,19 +1,18 @@
 <script lang="ts">
-  import { Gradient } from './_gradient'
-
-  // color helpers
+  export let ready = false
   const gl = (node: HTMLCanvasElement) => {
-    const gradient = new Gradient() as any
-    gradient.initGradient(node)
+    import('./_gradient').then((m) => {
+      const gradient = new m.Gradient() as any
+      gradient.initGradient(node)
+      ready = true
+    })
   }
 </script>
 
-<div class="bg-black relative">
+<div class="relative">
   <canvas class="h-screen w-full z-[-1] fixed" use:gl />
-  <div class="relative">
-    <slot />
-  </div>
 </div>
+<slot />
 
 <style>
   canvas {
