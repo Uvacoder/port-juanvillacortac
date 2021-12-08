@@ -1,10 +1,7 @@
 <script context="module" lang="ts">
   import XScroller from '$lib/components/XScroller.svelte'
 
-  import type { Load } from '@sveltejs/kit'
-  export const load: Load = async ({ fetch }) => {
-    return { props: await (await fetch('/date.json')).json() }
-  }
+  export const prerender = true
 </script>
 
 <div
