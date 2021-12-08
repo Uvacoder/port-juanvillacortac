@@ -9,8 +9,8 @@
   }
 </script>
 
-<div class="relative">
-  <canvas class="h-screen w-full z-[-1] fixed" use:gl />
+<div class="bg-black relative">
+  <canvas class="h-screen w-full z-[-1] duration-800 fixed" use:gl class:opacity-0={!ready} />
 </div>
 <slot />
 
