@@ -14,10 +14,6 @@
     href="https://fonts.gstatic.com"
     crossorigin="anonymous"
   />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet"
-  />
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
@@ -29,9 +25,9 @@
 <div class="relative">
   <div class="flex w-full p-6 top-0 fixed justify-between">
     <div class="flex space-x-4 logo" class:big={y == 0}>
-      <h1 class="font-title !leading-none">MK</h1>
+      <h1 class="font-title !leading-none">JV</h1>
       <h1 class="font-black self-end !text-xs !leading-none">
-        Motion<br />Kit
+        Juan<br />Villacorta
       </h1>
     </div>
     <div class="flex space-x-4 links">
