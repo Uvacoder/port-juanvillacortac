@@ -15,7 +15,7 @@
     crossorigin="anonymous"
   />
   <link
-    href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -28,11 +28,12 @@
 <Gradient>
   <div class="relative">
     <div class="flex w-full p-6 top-0 fixed justify-between">
-      <h1 class="font-title logo" class:big={y == 0}>JV</h1>
+      <div class="flex space-x-4 logo" class:big={y == 0}>
+        <h1 class="font-title leading-none">MK</h1>
+        <h1 class="font-black self-end !text-xs !leading-none">Motion<br />Kit</h1>
+      </div>
       <div class="flex space-x-4 links">
-        <a href="/work" class="font-black text-white">Work</a>
-        <a href="/about" class="font-black text-white">About</a>
-        <a href="/blog" class="font-black text-white">Blog</a>
+        <a href="https://github.com/juanvillacortac/motion-kit" class="font-black text-white">Github</a>
       </div>
     </div>
     <slot />
@@ -41,7 +42,7 @@
 
 <style windi:preflights:global windi:safelist:global>
   .logo {
-    @apply  font-bold text-white leading-none transform text-4xl duration-800 select-none antialiased;
+    @apply font-bold text-white leading-none transform text-4xl duration-400 select-none antialiased;
     @apply origin-top-left;
     will-change: filter;
   }
@@ -57,7 +58,6 @@
   }
   .logo:hover {
     filter: blur(2px);
-
   }
   .big {
     @apply scale-200;

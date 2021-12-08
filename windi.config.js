@@ -26,7 +26,7 @@ export default defineConfig({
       },
       fontFamily: {
         title: ['Comforter Brush', 'sans-serif'],
-        sans: ['Graphik', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
       spacing: {
