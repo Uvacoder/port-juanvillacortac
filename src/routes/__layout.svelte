@@ -22,7 +22,7 @@
 <Base />
 <Components />
 
-<Gradient fixed={true} />
+<Gradient fixed />
 <div class="relative">
   <div class="flex w-full p-6 top-0 fixed justify-between">
     <div class="flex space-x-4 logo" class:big={y == 0}>
@@ -31,7 +31,7 @@
         Juan<br />Villacorta
       </h1>
     </div>
-    <div class="flex space-x-4 links">
+    <div class="flex space-x-4 links items-center">
       <a
         href="https://github.com/juanvillacortac/motion-kit"
         class="font-black text-white">Github</a
