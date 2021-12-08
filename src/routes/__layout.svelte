@@ -25,20 +25,28 @@
 <Base />
 <Components />
 
-<Gradient>
-  <div class="relative">
-    <div class="flex w-full p-6 top-0 fixed justify-between">
-      <div class="flex space-x-4 logo" class:big={y == 0}>
-        <h1 class="font-title leading-none">MK</h1>
-        <h1 class="font-black self-end !text-xs !leading-none">Motion<br />Kit</h1>
-      </div>
-      <div class="flex space-x-4 links">
-        <a href="https://github.com/juanvillacortac/motion-kit" class="font-black text-white">Github</a>
-      </div>
+<Gradient fixed={true} />
+<div class="relative">
+  <div class="flex w-full p-6 top-0 fixed justify-between">
+    <div class="flex space-x-4 logo" class:big={y == 0}>
+      <h1 class="font-title !leading-none">MK</h1>
+      <h1 class="font-black self-end !text-xs !leading-none">
+        Motion<br />Kit
+      </h1>
     </div>
-    <slot />
+    <div class="flex space-x-4 links">
+      <a
+        href="https://github.com/juanvillacortac/motion-kit"
+        class="font-black text-white">Github</a
+      >
+      <a
+        href="https://github.com/juanvillacortac"
+        class="font-bold font-title text-white">JV</a
+      >
+    </div>
   </div>
-</Gradient>
+  <slot />
+</div>
 
 <style windi:preflights:global windi:safelist:global>
   .logo {
@@ -56,10 +64,8 @@
   .links a:hover {
     filter: none;
   }
-  .logo:hover {
-    filter: blur(2px);
-  }
+
   .big {
-    @apply scale-200;
+    @apply sm:scale-200;
   }
 </style>
