@@ -14,7 +14,6 @@
   import Components from '$lib/_components/styles/Components.svelte'
 
   let y = 0
-  export let key
 </script>
 
 <svelte:head>
@@ -86,8 +85,16 @@
         <div class="pt-4">
           <Hoverable size="sm">
             <div class="flex space-x-4 links items-center relative <sm:text-xs">
-              <a href="https://github.com/juanvillacortac" target="_blank" class="font-black relative">Github</a>
-              <a href="https://twitter.com/juanvillacortac" target="_blank"  class="font-black relative">Twitter</a>
+              <a
+                href="https://github.com/juanvillacortac"
+                target="_blank"
+                class="font-black relative">Github</a
+              >
+              <a
+                href="https://twitter.com/juanvillacortac"
+                target="_blank"
+                class="font-black relative">Twitter</a
+              >
             </div>
           </Hoverable>
         </div>

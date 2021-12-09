@@ -4,6 +4,7 @@
   export { className as class }
 
   let viewing = false
+  export { viewing as hovered }
 
   const coords = tweened({ x: 0, y: 0 }, { duration: 600 })
 
