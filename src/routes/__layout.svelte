@@ -52,9 +52,9 @@
     <div class="hidden sm:block">
       <Hoverable size="sm">
         <div class="flex space-x-4 links items-center relative">
-          <a href="/work" class="font-black text-white relative">Work</a>
-          <a href="/about" class="font-black text-white relative">About</a>
-          <a href="/blog" class="font-black text-white relative">Blog</a>
+          <a href="/" class="font-black text-white relative">Work</a>
+          <a href="/" class="font-black text-white relative">About</a>
+          <a href="/" class="font-black text-white relative">Blog</a>
         </div>
       </Hoverable>
     </div>
