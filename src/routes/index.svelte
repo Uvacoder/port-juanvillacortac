@@ -1,18 +1,22 @@
 <script context="module" lang="ts">
+  import Hoverable from '$lib/components/Hoverable.svelte'
+  import Viewport from '$lib/components/Viewport.svelte'
   import XScroller from '$lib/components/XScroller.svelte'
 
   export const prerender = true
 </script>
 
 <div
-  class="flex flex-col h-screen space-y-2 c items-center justify-center sm:space-y-4"
+  class="flex flex-col h-screen text-4xl c justify-center sm:space-y-4 sm:text-7xl"
 >
-  <p class="font-black text-white text-center text-3xl sm:text-5xl">
-    SvelteKit
-  </p>
-  <p class="font-black text-white text-center text-3xl sm:text-5xl">
-    Motion Components
-  </p>
+  <Viewport style="--anim-y: 0.5rem; --anim-t: 0.5s" oneWay>
+    <p class="font-black text-white anim">
+      I'm <Hoverable class="font-title inline-flex">Juan Villacorta</Hoverable>
+    </p>
+    <p class="font-black text-white anim" style="--anim-d: 200ms">
+      and I make web stuff
+    </p>
+  </Viewport>
 </div>
 
 <XScroller>
@@ -30,3 +34,6 @@
     </div>
   </div>
 </XScroller>
+
+<style windi:global>
+</style>
