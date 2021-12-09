@@ -7,6 +7,11 @@
       const gradient = new m.Gradient() as any
       gradient.initGradient(node)
       ready = true
+      return {
+        update: () => {
+          gradient.initGradient(node)
+        },
+      }
     })
   }
 </script>
@@ -26,10 +31,10 @@
     @apply fixed;
   }
   canvas {
-    --gradient-color-1: #6ec3f4;
-    --gradient-color-2: #3a3aff;
-    --gradient-color-3: #7cffb3;
-    --gradient-color-4: #ff61ab;
+    --gradient-color-1: var(--c-1, #6ec3f4);
+    --gradient-color-2: var(--c-2, #3a3aff);
+    --gradient-color-3: var(--c-3, #7cffb3);
+    --gradient-color-4: var(--c-4, #ff61ab);
 
     will-change: transform, opacity;
   }

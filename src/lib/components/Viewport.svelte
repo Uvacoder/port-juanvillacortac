@@ -8,6 +8,9 @@
   const viewport = (node: HTMLDivElement) => {
     const observer = new IntersectionObserver((entries) => {
       if (oneWay && entries[0].boundingClientRect.y < 0) {
+        if (!intersecting) {
+          intersecting = true
+        }
         return
       }
       intersecting = entries[0].isIntersecting

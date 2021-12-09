@@ -10,6 +10,8 @@
   let scene: HTMLDivElement
 
   export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md'
+
+  export let as = 'div'
 </script>
 
 <div
@@ -40,7 +42,7 @@
     class:w-48={size == 'xl'}
     class:h-48={size == 'xl'}
     class:!opacity-0={!viewing}
-    style="filter: blur(0.9rem); transform: translate(calc({$coords.x}px - 50%), calc({$coords.y}px - 50%))"
+    style="filter: blur(0.9rem); transform: translate3d(calc({$coords.x}px - 50%), calc({$coords.y}px - 50%), 0)"
   />
   <div class="relative">
     <slot />

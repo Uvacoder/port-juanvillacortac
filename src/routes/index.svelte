@@ -10,10 +10,10 @@
   class="flex flex-col h-screen text-4xl c justify-center sm:space-y-4 sm:text-7xl"
 >
   <Viewport style="--anim-y: 0.5rem; --anim-t: 0.5s" oneWay>
-    <p class="font-black text-white anim">
+    <p class="font-black anim">
       I'm <Hoverable class="font-title inline-flex">Juan Villacorta</Hoverable>
     </p>
-    <p class="font-black text-white anim" style="--anim-d: 200ms">
+    <p class="font-black anim" style="--anim-d: 200ms">
       and I make web stuff
     </p>
   </Viewport>
